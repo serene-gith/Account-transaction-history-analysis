@@ -33,7 +33,7 @@ except Exception:  # 모듈이 없거나 불러오기 실패해도 앱은 계속
 DEFAULT_AMOUNT_TOLERANCE = 100_000   # 금액 허용 오차 (원)
 DEFAULT_TIME_UNIT = "year"           # "day" | "month" | "year"
 DEFAULT_WINDOW = 10                  # 시간창 크기 (예: 3개월)
-DEFAULT_DATA_URL = "https://github.com/serene-gith/Account-transaction-history-analysis/raw/main/계좌내역.xlsx"
+DEFAULT_DATA_URL = "https://github.com/serene-gith/Account-transaction-history-analysis/raw/main/accountlist.xlsx"
 # ====================================================================
 
 IN_METHOD_PATTERN = r"(이체|예금|대체)"
@@ -451,4 +451,5 @@ if run:
                 st.success("분석이 완료되었습니다.")
 
             except Exception as e:
+
                 st.error(f"오류 발생: {e}")
